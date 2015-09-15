@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PublicBuddy</string>
+
+    <!-- Strings for Menu -->
+    <string name="menu_take_photo">Take photo</string>
+    <string name="menu_choose_photo">Select photo from device gallery</string>
+    <string name="menu_take_video">Record video</string>
+    <string name="menu_choose_video">Select video from device gallery</string>
+    <string name="menu_record_audio">Record audio</string>
+    <string name="menu_choose_audio">Select audio from device gallery</string>
+    <string name="action_search">Search Incidents</string>
+    <string name="action_add_incident">Add New Incident</string>
+    <!--  -->
+
+    <string name="title_section1">Submitted</string>
+    <string name="title_section2">Saved</string>
+    <string name="title_section3">Map</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_create_incident">CreateIncident</string>
+
+    <!-- Common Error messages -->
+    <string name="error_no_data_connection_available">No internet connection</string>
+    <string name="error_field_is_required">This field is required</string>
+    <!--  -->
+
+    <!-- Common Messages -->
+    <string name="success">Success</string>
+    <!--  -->
+
+    <!-- Common Captions -->
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="yas">Yes</string>
+    <string name="no">No</string>
+    <string name="next_item">Next</string>
+    <string name="prev_item">Prev</string>
+    <!--  -->
+    <string name="empty_message">empty</string>
+    <string name="video_play">Play</string>
+    <string name="video_stop">Stop</string>
+    <string name="video_pause">Pause</string>
+    <string name="comments">Comments:</string>
+    <string name="report_id">Report ID:</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_incident_card_detail">IncidentCardDetailActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_full_screen_image">FullScreenImageActivity</string>
+    <string name="remark">Remarks:</string>
+    <string name="title_activity_video_view">VideoViewActivity</string>
+</resources>

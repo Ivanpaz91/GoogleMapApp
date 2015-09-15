@@ -1,0 +1,30 @@
+<resources>
+    <string name="title_activity_register">Register</string>
+
+    <!-- Strings related to Register -->
+    <string name="prompt_username">Username</string>
+    <string name="prompt_repeatpassword">Retype Password</string>
+    <string name="prompt_pin">PIN</string>
+    <string name="action_register">Register</string>
+    <string name="action_register_short">Register</string>
+    <string name="prompt_first_name">First Name</string>
+    <string name="prompt_last_name">Last Name</string>
+    <string name="prompt_phone_mobile">Primary Phone</string>
+
+    <!-- Error messages -->
+    <string name="error_pin_empty">PIN is required</string>
+    <string name="error_username_empty">Username is required</string>
+    <string name="error_password_empty">Password is required</string>
+    <string name="error_retypePassword_empty">This field is required</string>
+    <string name="error_email_empty">Email is required</string>
+    <string name="error_firstname_empty">First name is required</string>
+    <string name="error_lastname_empty">Last name is required</string>
+    <string name="error_primaryPhone_empty">Phone is required</string>
+
+    <string name="error_wrong_pin_empty">PIN format is wrong</string>
+    <string name="error_wrong_password_empty">Password format is wrong</string>
+    <string name="error_passwords_mismatch">Passwords mismatch</string>
+    <string name="error_phone_format">Phone format is wrong</string>
+    <string name="error_email_format">Email format is wrong</string>
+
+</resources>

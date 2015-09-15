@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_music"
+    android:orientation="vertical"
+
+  >
+
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_extra_large"
+        android:layout_centerHorizontal="true"/>
+    <RelativeLayout
+        android:id="@+id/btn_controller_dialog_audio"
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_normal"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_play"
+            android:layout_width="@dimen/space_normal"
+            android:layout_height="@dimen/space_normal"
+            android:background="@drawable/play"
+            android:layout_margin="@dimen/margin_normal">
+        </Button>
+
+        <Button
+            android:id="@+id/btn_pause"
+            android:layout_width="@dimen/space_normal"
+            android:layout_height="@dimen/space_normal"
+            android:background="@drawable/pause"
+            android:layout_margin="@dimen/margin_normal">
+        </Button>
+
+        <Button
+            android:id="@+id/btn_stop"
+            android:layout_width="@dimen/space_normal"
+            android:layout_height="@dimen/space_normal"
+            android:background="@drawable/stop"
+            android:layout_toRightOf="@id/btn_pause"
+            android:layout_margin="@dimen/margin_normal">
+        </Button>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft ="10dp"
+        android:layout_marginTop="3dp"
+        android:text=""
+
+        android:textColor="@android:color/white" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginLeft="@dimen/margin_extra_large"
+        android:layout_marginRight="@dimen/margin_extra_large" >
+    </SeekBar>
+    <Button
+        android:id="@+id/btn_prev_item_audio"
+        android:layout_width="@dimen/width_arrow_full"
+        android:layout_height="@dimen/height_arrow_full"
+        android:layout_marginTop="@dimen/space_small"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/prev_item_image"/>
+    <Button
+        android:id="@+id/btn_forward_item_audio"
+        android:layout_width="@dimen/width_arrow_full"
+        android:layout_height="@dimen/height_arrow_full"
+        android:layout_marginRight="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/space_small"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/next_item_image"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
+

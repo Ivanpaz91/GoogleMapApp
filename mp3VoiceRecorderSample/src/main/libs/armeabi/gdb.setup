@@ -1,0 +1,3 @@
+set solib-search-path E:/PublicBuddy-AndroidApp/mp3VoiceRecorderSample/src/main//obj/local/armeabi
+source D:/MobileTools/android-ndk-r10d/prebuilt/common/gdb/common.setup
+directory D:/MobileTools/android-ndk-r10d/platforms/android-3/arch-arm/usr/include E:/PublicBuddy-AndroidApp/mp3VoiceRecorderSample/src/main//jni D:/MobileTools/android-ndk-r10d/sources/cxx-stl/system

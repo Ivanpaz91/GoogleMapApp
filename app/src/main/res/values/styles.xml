@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BlueButton" parent="android:Widget.Button">
+        <item name="android:background">@drawable/btn_blue_1</item>
+        <item name="android:minHeight">42dip</item>
+        <item name="android:minWidth">64dip</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">16dp</item>
+        <item name="typeface">roboto_regular</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginTop">@dimen/margin_normal</item>
+    </style>
+    <style name="PurpleButton" parent="android:Widget.Button">
+        <item name="android:background">@drawable/btn_purple</item>
+        <item name="android:minHeight">42dip</item>
+        <item name="android:minWidth">64dip</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">16dp</item>
+        <item name="typeface">roboto_regular</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginTop">@dimen/margin_normal</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <style name="NoActionBarSplashTheme" parent="AppTheme">
+        <item name="android:windowTitleSize">0dp </item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+
+
+    <style name="BlackButton" parent="@style/BlueButton">
+        <item name="android:background">@drawable/btn_black</item>
+    </style>
+
+    <style name="FormKeyTextView">
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:textSize">20sp</item>
+        <item name="typeface">roboto_bold</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+
+    <style name="FormDataTextView" parent="FormKeyTextView">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="MyTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:alertDialogStyle">@style/CustomAlertDialogStyle</item>
+        <item name="android:textColorPrimary">#000000</item>
+    </style>
+
+    <style name="CustomAlertDialogStyle">
+        <item name="android:bottomBright">@android:color/black</item>
+        <item name="android:bottomDark">@android:color/black</item>
+        <item name="android:bottomMedium">@android:color/black</item>
+        <item name="android:centerBright">@android:color/black</item>
+        <item name="android:centerDark">@android:color/black</item>
+        <item name="android:centerMedium">@android:color/black</item>
+        <item name="android:fullBright">@android:color/black</item>
+        <item name="android:fullDark">@android:color/black</item>
+        <item name="android:topBright">@android:color/black</item>
+        <item name="android:topDark">@android:color/black</item>
+    </style>
+
+
+    <style name="ButtonText">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+</resources>

@@ -1,0 +1,98 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    tools:context="com.asoftstudio.android.publicbuddy.fragments.IncidentCardDetailFragment">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        card_view:cardCornerRadius="8dp">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#46a3a3a3">
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/map_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                map:liteMode="true"
+                map:mapType="normal" />
+
+            <!--<com.devspark.robototextview.widget.RobotoTextView-->
+                <!--style="@style/FormKeyTextView"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+                <!--android:text="@string/report_id"-->
+                <!--android:textColor="@android:color/holo_blue_dark"-->
+                <!--android:id="@+id/incidentIdLabel"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_marginLeft="5dp" />-->
+
+            <com.devspark.robototextview.widget.RobotoTextView
+                style="@style/FormKeyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/holo_blue_light"
+                android:id="@+id/incidentId"
+                android:layout_marginLeft="5dp"
+                android:layout_alignParentTop="true"/>
+
+            <com.devspark.robototextview.widget.RobotoTextView
+                style="@style/FormKeyTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/comments"
+                android:id="@+id/comment"
+                android:textColor="@android:color/black"
+                android:layout_alignParentBottom="true"
+
+                android:layout_marginLeft="5dp"
+                android:layout_below="@+id/map_view" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/iconImage"
+                    android:src="@drawable/picture"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/iconVideo"
+                    android:src="@drawable/video"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/iconAudio"
+                    android:src="@drawable/audio"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</FrameLayout>

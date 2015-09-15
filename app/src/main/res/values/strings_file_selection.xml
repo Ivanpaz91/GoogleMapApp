@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="folder_list_item_type">folder_list_item_type</string>
+    <string name="folder_path">folder_path</string>
+    <string name="position">position</string>
+    <string name="file_name">File Name</string>
+    <string name="rename">Rename</string>
+    <string name="enter_a_name_for_folder">You must enter a folder name.</string>
+    <string name="folder_could_not_be_renamed">The folder could not be renamed.</string>
+    <string name="folder_renamed">Folder renamed.</string>
+    <string name="cant_copy_this_file_folder">Can\'t copy this file/folder.</string>
+    <string name="move">Move</string>
+    <string name="moving_file">Moving file.</string>
+    <string name="copy">Copy</string>
+    <string name="copying_file">Copying file.</string>
+    <string name="run_in_background">Run In Background</string>
+    <string name="source_target_same">The source and destination folders are the same.</string>
+    <string name="done_move">Done moving file(s).</string>
+    <string name="done_copy">Done copying file(s).</string>
+    <string name="file_could_not_be_written_new_location">The file(s) could not be written to the new location.</string>
+    <string name="delete">Delete</string>
+    <string name="deleting_files">Deleting file(s).</string>
+    <string name="folder_deleted">Folder deleted.</string>
+    <string name="file_deleted">File deleted.</string>
+    <string name="folder_could_not_be_deleted">The folder could not be deleted.</string>
+    <string name="file_could_not_be_deleted">The file could not be deleted.</string>
+    <string name="context_menu_attach_selection">Attach to Incident</string>
+</resources>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:id="@+id/main">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Report ID: 99 999 999"
+            android:id="@+id/reportId"
+            android:layout_toRightOf="@+id/statusIcon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="January 14, 2015 18:44"
+            android:id="@+id/dateTime"
+            android:layout_below="@+id/reportId"
+            android:layout_toRightOf="@+id/statusIcon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Organization"
+            android:id="@+id/organizationLabel"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentStart="false"
+            android:layout_toRightOf="@+id/statusIcon"
+            android:layout_below="@+id/dateTime"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Entity"
+            android:id="@+id/entityLabel"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentStart="false"
+            android:layout_below="@+id/organizationLabel"
+            android:layout_toRightOf="@+id/statusIcon"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Category"
+            android:id="@+id/categoryLabel"
+            android:layout_alignBottom="@+id/entityLabel"
+            android:layout_toRightOf="@+id/entityLabel"
+            android:layout_toEndOf="@+id/entityLabel"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/statusIcon"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="false"
+            android:src="@drawable/icon_uploaded_progress"
+            android:layout_alignBottom="@+id/categoryLabel" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/ribbons"
+            android:gravity="right"
+            android:layout_alignParentTop="true"
+            android:layout_alignBottom="@+id/dateTime"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageIcon"
+                android:src="@drawable/ribbon_image"
+                android:adjustViewBounds="true"
+                android:nestedScrollingEnabled="false"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/locationIcon"
+                android:layout_toStartOf="@+id/locationIcon" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/videoIcon"
+                android:src="@drawable/ribbon_video"
+                android:adjustViewBounds="true" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/audioIcon"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ribbon_audio" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/locationIcon"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ribbon_location"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignBottom="@+id/statusIcon"
+                android:cropToPadding="true"
+                android:baselineAlignBottom="false" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progress"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/statusIcon"
+            android:layout_alignRight="@+id/statusIcon"
+            android:layout_marginTop="8dp"
+            android:layout_alignBottom="@+id/statusIcon"
+            android:layout_alignTop="@+id/statusIcon"
+            android:indeterminate="true"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp" />
+        </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffe3e3e3"
+        android:layout_alignTop="@+id/main"
+        android:layout_alignBottom="@+id/main"
+        android:gravity="center_vertical"
+        android:id="@+id/delete"
+        android:visibility="invisible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/delete_icon"
+            android:src="@android:drawable/ic_menu_delete" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Delete Incident"
+            android:id="@+id/delete_lable"
+            android:textColor="@android:color/white"
+            android:layout_weight="0.1"
+            android:gravity="center_vertical|center_horizontal" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/undo_icon"
+            android:src="@android:drawable/ic_menu_revert"
+            android:layout_weight="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Tap to undo"
+            android:id="@+id/undo_lable"
+            android:layout_weight="0.1"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

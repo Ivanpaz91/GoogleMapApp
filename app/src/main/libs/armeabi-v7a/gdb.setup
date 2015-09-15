@@ -1,0 +1,3 @@
+set solib-search-path E:/PublicBuddy-AndroidApp/app/src/main//obj/local/armeabi-v7a
+source D:/MobileTools/android-ndk-r10d/prebuilt/common/gdb/common.setup
+directory D:/MobileTools/android-ndk-r10d/platforms/android-9/arch-arm/usr/include E:/PublicBuddy-AndroidApp/app/src/main//jni D:/MobileTools/android-ndk-r10d/sources/cxx-stl/stlport/stlport D:/MobileTools/android-ndk-r10d/sources/cxx-stl//gabi++/include

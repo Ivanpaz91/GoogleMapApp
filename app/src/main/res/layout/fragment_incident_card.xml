@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingTop="10dp"
+    android:paddingRight="10dp"
+
+    android:id="@+id/view_card_fragment">
+
+    <!-- A CardView that contains a TextView -->
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_card_view"
+        card_view:cardCornerRadius="8dp">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#46a3a3a3">
+
+            <com.google.android.gms.maps.MapView
+
+                android:id="@+id/map_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_map_view"
+                map:liteMode="true"
+                map:mapType="normal"
+                />
+
+            <!--<com.devspark.robototextview.widget.RobotoTextView-->
+                <!--style="@style/FormKeyTextView"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+                <!--android:text="@string/report_id"-->
+                <!--android:textColor="@android:color/holo_blue_dark"-->
+                <!--android:id="@+id/incidentIdLabel"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_marginLeft="5dp" />-->
+
+            <TextView
+                style="@style/FormKeyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/black"
+                android:id="@+id/incidentId"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textSize="@dimen/font_size_largest"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_alignParentTop="true"
+
+              />
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="@dimen/space_large"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                <TextView
+                    style="@style/FormKeyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/remark"
+                    android:id="@+id/textView_remark"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:textSize="@dimen/font_size_largest"/>
+
+                <TextView
+                    style="@style/FormKeyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/comment"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/textView_remark"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font_size_largest"
+                   />
+                     </LinearLayout>
+                </HorizontalScrollView>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true">
+                <RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/layout_iconImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/iconImage"
+                        android:src="@drawable/picture_image"
+                        android:layout_weight="1"
+
+                        android:adjustViewBounds="true" />
+
+                    <TextView
+                        android:id="@+id/text_iconImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/iconImage"
+                        android:layout_alignRight="@+id/iconImage"
+                        android:layout_margin="1dp"
+                        android:gravity="center"
+
+                        android:textColor="@android:color/holo_blue_bright" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/layout_iconVideo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/iconVideo"
+                        android:src="@drawable/video_image"
+                        android:adjustViewBounds="true" />
+
+                    <TextView
+                        android:id="@+id/text_iconVideo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/iconVideo"
+                        android:layout_alignRight="@+id/iconVideo"
+                        android:layout_margin="1dp"
+                        android:gravity="center"
+
+                        android:textColor="@android:color/holo_blue_bright" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/layout_iconAudio"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/iconAudio"
+                        android:src="@drawable/audio_image"
+                        android:adjustViewBounds="true" />
+
+                    <TextView
+                        android:id="@+id/text_iconAudio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/iconAudio"
+                        android:layout_alignRight="@+id/iconAudio"
+                        android:layout_margin="1dp"
+                        android:gravity="center"
+
+                        android:textColor="@android:color/holo_blue_bright" />
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+        <ImageView android:layout_width="@dimen/margin_extra_large"
+            android:layout_height = "@dimen/margin_extra_large"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/space_small"
+            android:background="@drawable/icon_upload"
+            android:textColor="@android:color/holo_blue_dark"
+            android:id="@+id/btn_send_incident"
+            android:visibility="invisible"
+            android:layout_marginBottom="@dimen/margin_smallest"
+            android:clickable="true"
+            ></ImageView>
+         <ImageView android:layout_width="@dimen/margin_extra_large"
+                 android:layout_height = "@dimen/margin_extra_large"
+                 android:layout_alignParentBottom="true"
+                 android:layout_alignParentRight="true"
+                 android:text = "Delete"
+                 android:textColor="@android:color/holo_blue_dark"
+                 android:id="@+id/btn_delete_incident"
+                 android:visibility="invisible"
+                android:background="@drawable/delete"
+             android:layout_marginBottom="@dimen/margin_smallest"
+             android:clickable="true"
+             ></ImageView>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

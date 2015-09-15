@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="60dp"
+    android:background="@color/color_bg"
+    android:gravity="center_vertical"
+    android:weightSum="3">
+
+    <com.devspark.robototextview.widget.RobotoTextView
+        style="@style/FormDataTextView"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/label"
+        android:layout_weight="1"
+        android:textColor="@android:color/white"
+        android:gravity="right|center_vertical" />
+
+    <Spinner
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:id="@+id/values"
+        android:gravity="center_vertical"
+        android:layout_weight="2"
+        android:scrollbarStyle="insideOverlay"/>
+</TableRow>

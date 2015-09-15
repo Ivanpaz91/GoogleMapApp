@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_organization">Organization:</string>
+    <string name="hint_incident_remarks">Enter Remarks Here...</string>
+    <string name="button_send">Send</string>
+
+    <string name="send_notice">Finish &amp; Send</string>
+    <string name="save_notice">Save &amp; Finish Later</string>
+</resources>

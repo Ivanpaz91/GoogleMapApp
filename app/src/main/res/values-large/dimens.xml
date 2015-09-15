@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="font_size_smallest">12sp</dimen>
+    <dimen name="font_size_small">18sp</dimen>
+    <dimen name="font_size_normal">21sp</dimen>
+    <dimen name="font_size_large">27sp</dimen>
+    <dimen name="font_size_largest">30sp</dimen>
+
+
+    <dimen name="margin_smallest">6dp</dimen>
+    <dimen name="margin_small">12dp</dimen>
+    <dimen name="margin_normal">15dp</dimen>
+    <dimen name="margin_large">21dp</dimen>
+    <dimen name="margin_largest">30dp</dimen>
+    <dimen name="margin_extra_large">45dp</dimen>
+
+
+    <dimen name="space_smallest">30dp</dimen>
+    <dimen name="space_small">60dp</dimen>
+    <dimen name="space_normal">60dp</dimen>
+    <dimen name="space_large">110dp</dimen>
+    <dimen name="space_largest">150dp</dimen>
+    <dimen name="space_extra_large">180dp</dimen>
+    <dimen name="width_cloud">320dp</dimen>
+
+    <dimen name="height_mapview">250dp</dimen>
+    <dimen name="height_card_view">250dp</dimen>
+    <dimen name="height_map_view">280dp</dimen>
+    <dimen name="height_cloud">110dp</dimen>
+</resources>

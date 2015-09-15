@@ -1,0 +1,47 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 7
+    buildToolsVersion "19.1.0"
+
+    defaultConfig {
+
+        minSdkVersion 7
+        targetSdkVersion 21
+
+        ndk {
+            moduleName "mp3lame"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+    packagingOptions{
+        exclude 'lib/armeabi-v7a/libmp3lame.so'
+    }
+
+}
+task buildNative(type: Exec, description: 'Compile JNI source via NDK') {
+
+    def ndkDir = plugins.getPlugin('com.android.library').sdkHandler.ndkFolder
+    if (System.properties['os.name'].toLowerCase().contains('windows')) {
+        commandLine "$ndkDir/ndk-build.cmd",
+                '-C', file('src/main/jni').absolutePath,
+                '-j', Runtime.runtime.availableProcessors(),
+                'all', 'NDK_DEBUG=1'
+    } else {
+        commandLine "$ndkDir/ndk-build",
+                '-C', file('src/main/jni').absolutePath,
+                '-j', Runtime.runtime.availableProcessors(),
+                'all', 'NDK_DEBUG=1'
+    }
+
+
+    tasks.withType(JavaCompile) {
+        compileTask -> compileTask.dependsOn buildNative
+    }
+}

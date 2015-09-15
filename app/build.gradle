@@ -1,0 +1,100 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'PublicBuddy'
+            keyPassword 'PublicBuddy@2015'
+            storeFile file('D:/android_key_public_buddy.jks')
+            storePassword 'PublicBuddy@2015'
+        }
+    }
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+    defaultConfig {
+        applicationId "com.superiorinfotech.publicbuddy"
+        minSdkVersion 16
+        targetSdkVersion 21
+        versionCode 6
+        versionName "6"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable false
+            signingConfig signingConfigs.config
+            zipAlignEnabled true
+
+        }
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            output.outputFile = new File(
+                    output.outputFile.parent,
+                    output.outputFile.name.replace(".apk", "-${variant.versionName}.apk"))
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'com.android.support:support-v13:21.0.+'
+    compile 'com.google.android.gms:play-services:6.5.87'
+    compile 'com.android.support:cardview-v7:21.0.+'
+    compile 'com.android.support:recyclerview-v7:21.0.+'
+    compile 'ch.acra:acra:4.5.0'
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+    compile('de.keyboardsurfer.android.widget:crouton:1.8.5@aar') {
+        // exclusion is not necessary, but generally a good idea.
+        exclude group: 'com.google.android', module: 'support-v4'
+    }
+    compile 'commons-io:commons-io:2.4'
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'com.github.johnkil.android-robototextview:robototextview:2.3.0'
+    compile files('libs/universal-image-loader-1.9.3.jar')
+    compile files('libs/event                                                                                                                                               bus-2.2.0.jar')
+    compile project(':mp3VoiceRecorderSample')
+    compile('com.crashlytics.sdk.android:crashlytics:2.3.2@aar') {
+        transitive = true;
+    }
+    compile 'it.sephiroth.android.library.imagezoom:imagezoom:+'
+}
+//
+//task buildNative(type: Exec, description: 'Compile JNI source via NDK') {
+//
+//    def ndkDir = plugins.getPlugin('com.android.application').sdkHandler.ndkFolder
+//    if (System.properties['os.name'].toLowerCase().contains('windows')) {
+//        commandLine "$ndkDir/ndk-build.cmd",
+//                '-C', file('src/main/jni').absolutePath,
+//                '-j', Runtime.runtime.availableProcessors(),
+//                'all', 'NDK_DEBUG=1'
+//    } else {
+//        commandLine "$ndkDir/ndk-build",
+//                '-C', file('src/main/jni').absolutePath,
+//                '-j', Runtime.runtime.availableProcessors(),
+//                'all', 'NDK_DEBUG=1'
+//    }
+//
+//
+//    tasks.withType(JavaCompile) {
+//        compileTask -> compileTask.dependsOn buildNative
+//    }
+//}

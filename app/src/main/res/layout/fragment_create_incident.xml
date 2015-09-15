@@ -1,0 +1,357 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingRight="@dimen/margin_small"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/margin_small">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollView"
+    android:fillViewport="false"
+    android:layout_above="@+id/send">
+
+<RelativeLayout
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.asoftstudio.android.publicbuddy.incidentreporter.fragments.CreateIncidentFragment"
+    android:id="@+id/root"  >
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/header"
+        android:stretchColumns="0,1"
+        android:weightSum="4">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:background="@color/color_bg"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:baselineAligned="false"
+            android:gravity="center_vertical"
+            android:minHeight="60dp"
+            android:elevation="1dp">
+
+            <com.devspark.robototextview.widget.RobotoTextView
+                style="@style/FormKeyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/label_organization"
+                android:id="@+id/textView2"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="@dimen/font_size_extra_large"
+                android:layout_weight="1"
+                android:textColor="#fff1f1f1"
+                android:layout_marginLeft="@dimen/margin_small"
+               />
+
+            <com.devspark.robototextview.widget.RobotoTextView
+                style="@style/FormKeyTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="ASoftStudio"
+                android:id="@+id/organization"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/textView2"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:textSize="@dimen/font_size_large"
+                android:textColor="@android:color/black" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_smallest"
+            android:background="@color/color_bg"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:minHeight="60dp"
+            android:elevation="1dp">
+
+            <com.devspark.robototextview.widget.RobotoTextView
+                style="@style/FormKeyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Entity:"
+                android:textSize="@dimen/font_size_extra_large"
+                android:textColor="@android:color/white"
+                android:id="@+id/textView5"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/margin_small" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/entity"
+                android:layout_below="@+id/textView2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:gravity="left"
+                android:layout_weight="1" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_smallest"
+            android:background="@color/color_bg"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:minHeight="60dp"
+            android:elevation="1dp">
+
+            <com.devspark.robototextview.widget.RobotoTextView
+                style="@style/FormKeyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Category:"
+                android:textColor="@android:color/white"
+                android:id="@+id/textView6"
+                android:textSize="@dimen/font_size_extra_large"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/margin_small" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/category"
+                android:layout_below="@+id/entity"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:gravity="left"
+                android:layout_weight="1" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="@dimen/margin_smallest"
+            android:background="@color/color_bg"
+            android:id="@+id/fillData"
+            android:visibility="visible"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:minHeight="60dp"
+            android:gravity="center_vertical"
+            android:elevation="1dp">
+
+            <com.devspark.robototextview.widget.RobotoTextView
+                style="@style/FormKeyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Fill Form Data"
+                android:textSize="@dimen/font_size_extra_large"
+                android:id="@+id/textView7"
+                android:textColor="@android:color/white"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/margin_small"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imageView"
+                android:src="@drawable/form_icon"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/margin_large" />
+        </TableRow>
+
+    </TableLayout>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/remarks"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/header"
+        android:layout_alignEnd="@id/header"
+        android:lines="4"
+        android:textCursorDrawable="@drawable/cursor_black"
+        android:hint="@string/hint_incident_remarks"
+        android:layout_below="@+id/header" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/remarks"
+        android:id="@+id/buttons"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:gravity="center_horizontal">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Button"
+                android:id="@+id/photo1"
+                android:src="@drawable/picture"
+                android:layout_alignTop="@+id/photo2"
+                android:background="@null"
+                android:layout_margin="2dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Button"
+                android:id="@+id/video1"
+                android:src="@drawable/video"
+                android:layout_below="@+id/photo1"
+                android:layout_alignLeft="@+id/photo1"
+                android:background="@null"
+                android:layout_margin="2dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Button"
+                android:id="@+id/audio1"
+                android:src="@drawable/audio"
+                android:layout_below="@+id/photo2"
+                android:layout_alignLeft="@+id/photo2"
+                android:background="@null"
+                android:layout_margin="2dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Button"
+                android:id="@+id/location1"
+                android:src="@drawable/location"
+                android:layout_below="@+id/photo3"
+                android:layout_alignLeft="@+id/photo3"
+                android:background="@null"
+                android:layout_margin="2dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/mediaFiles"
+        android:layout_below="@+id/buttons"
+        android:layout_alignLeft="@+id/buttons"
+        android:layout_alignRight="@+id/buttons">
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttons"
+            android:id="@+id/photoFiles"
+            android:layout_weight="1"></TableLayout>
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/videoFiles"
+            android:layout_weight="1"></TableLayout>
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/audioFiles"
+            android:layout_weight="1"></TableLayout>
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/locationFiles"
+            android:layout_weight="1"></TableLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
+</ScrollView>
+
+    <com.devspark.robototextview.widget.RobotoButton
+                style="@style/BlueButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_send"
+        android:id="@+id/send"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/dummy"
+        android:layout_above="@+id/textView3" />
+
+    <com.devspark.robototextview.widget.RobotoButton
+                style="@style/BlueButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/save"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/dummy"
+        android:layout_above="@+id/textView4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/send_notice"
+        android:id="@+id/textView3"
+        android:layout_alignRight="@+id/send"
+        android:layout_marginRight="5dp"
+        android:layout_alignLeft="@+id/send"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save_notice"
+        android:id="@+id/textView4"
+        android:layout_alignLeft="@+id/save"
+        android:layout_marginLeft="5dp"
+        android:layout_alignRight="@+id/save"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true" />
+
+    <Space android:id="@+id/dummy"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+</RelativeLayout>

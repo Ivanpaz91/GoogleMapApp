@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:id="@+id/root"
+    android:orientation="vertical"
+    android:measureWithLargestChild="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/scrollView2"
+        android:fillViewport="true"
+        android:layout_weight="1">
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/fillFormTable">
+
+        </TableLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/linearLayout">
+
+        <com.devspark.robototextview.widget.RobotoButton
+                style="@style/BlueButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:id="@+id/cancel"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1" />
+
+        <com.devspark.robototextview.widget.RobotoButton
+            style="@style/BlueButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:id="@+id/save"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1" />
+    </LinearLayout>
+</LinearLayout>
